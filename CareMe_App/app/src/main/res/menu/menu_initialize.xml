@@ -1,0 +1,23 @@
+<!--
+  * Esta obra está sujeta a la licencia Reconocimiento-CompartirIgual 4.0 Internacional de
+ * Creative Commons. Para ver una copia de esta licencia,
+ * visite http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, creado por Alejandro Perez Vereda el 29/7/15.
+ *
+ * This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+ * License. To view a copy of this license,
+ * visit http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, created by Alejandro Perez Vereda on 29/7/15.
+ *
+ * Contact: aperezvereda@gmail.com
+ -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.careme.apvereda.careme.InitializeActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  * Esta obra está sujeta a la licencia Reconocimiento-CompartirIgual 4.0 Internacional de
+ * Creative Commons. Para ver una copia de esta licencia,
+ * visite http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, creado por Alejandro Perez Vereda el 29/7/15.
+ *
+ * This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+ * License. To view a copy of this license,
+ * visit http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, created by Alejandro Perez Vereda on 29/7/15.
+ *
+ * Contact: aperezvereda@gmail.com
+ -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.careme.apvereda.careme" >
+
+    <permission
+        android:name="com.careme.apvereda.careme.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.nimbees.test.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+
+        <!-- Para usar servicios de Google -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Se utiliza para mostrar el contenido de las comunicaciones -->
+        <activity
+            android:name="com.nimbees.platform.NotificationDisplayActivity"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <!-- Para procesar los mensajes de inserción y ser capaz de realizar un seguimiento de la ubicación del usuario -->
+        <receiver
+            android:name="com.nimbees.platform.NimbeesBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="com.careme.apvereda.careme" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.nimbees.platform.gcm.NimbeesGcmService" />
+        <service android:name="com.nimbees.platform.location.NimbeesLocationTrackingService" />
+
+        <receiver android:name=".PowerConnectionReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AlarmScheduler" />
+        <receiver android:name=".DailyAlarm" />
+
+        <service
+            android:name=".AccumulatorService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InitializeActivity"
+            android:label="@string/title_activity_initialize" >
+        </activity>
+    </application>
+
+</manifest>

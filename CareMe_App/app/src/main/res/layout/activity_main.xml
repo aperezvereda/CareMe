@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  * Esta obra está sujeta a la licencia Reconocimiento-CompartirIgual 4.0 Internacional de
+ * Creative Commons. Para ver una copia de esta licencia,
+ * visite http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, creado por Alejandro Perez Vereda el 29/7/15.
+ *
+ * This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+ * License. To view a copy of this license,
+ * visit http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, created by Alejandro Perez Vereda on 29/7/15.
+ *
+ * Contact: aperezvereda@gmail.com
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="243dp"
+        android:layout_weight="0.31">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabhome"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_gravity="end|top"
+            android:layout_marginRight="127dp"
+            android:layout_marginTop="180dp"
+            android:src="@mipmap/fab_home"
+            app:borderWidth="0dp"
+            app:elevation="6dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabsos"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_gravity="top|end|center_horizontal"
+            android:layout_marginTop="180dp"
+            android:src="@mipmap/fab_sos"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            android:layout_marginRight="20dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabcall"
+            android:layout_width="66dp"
+            android:layout_height="67dp"
+            android:layout_gravity="top|left|end"
+            android:layout_marginTop="180dp"
+            android:src="@mipmap/call"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            android:layout_marginLeft="20dp" />
+
+
+        <AnalogClock
+            android:id="@+id/analogClock1"
+            android:layout_width="202dp"
+            android:layout_height="162dp"
+            android:layout_gravity="center_horizontal|top"
+            android:dial="@drawable/clockdialdef"
+            android:hand_hour="@drawable/clockhoursdef"
+            android:hand_minute="@drawable/clockminutesdef"
+            android:layout_marginTop="10dp" />
+
+        <!--<android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabsos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/fab_sos"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            android:layout_marginBottom="5dp" />-->
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/listRoutines"
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:layout_weight="0.11" />
+
+
+</LinearLayout>

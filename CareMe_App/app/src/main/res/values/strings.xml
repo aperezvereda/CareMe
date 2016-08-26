@@ -1,0 +1,36 @@
+<!--
+  * Esta obra está sujeta a la licencia Reconocimiento-CompartirIgual 4.0 Internacional de
+ * Creative Commons. Para ver una copia de esta licencia,
+ * visite http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, creado por Alejandro Perez Vereda el 29/7/15.
+ *
+ * This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+ * License. To view a copy of this license,
+ * visit http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+ * CareMe, created by Alejandro Perez Vereda on 29/7/15.
+ *
+ * Contact: aperezvereda@gmail.com
+ -->
+
+<resources>
+    <string name="app_name">CareMe</string>
+    <string name="welcome">Bienvenido a CareMe</string>
+    <string name="action_settings">Imprimir Datos</string>
+    <string name="enable_alarms">Habilitar Alarmas</string>
+    <string name="btnPlaces">Lugares</string>
+    <string name="btnPlaceInstance">Instancias</string>
+    <string name="btnInstance">Instancias</string>
+    <string name="btnHome">Casa</string>
+    <string name="sos">SOS</string>
+    <string name="call">Call Carer</string>
+    <string name="btnClear">Limpiar</string>
+    <string name="btnRoutines">Rutinas</string>
+    <string name="notifTittle">Nos vamos</string>
+    <string name="notifBody">En breves momentos debería salir si quiere llegar a " +
+                        "tiempo a su siguiente compromiso</string>
+    <string name="title_activity_initialize">Inicializar</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>
